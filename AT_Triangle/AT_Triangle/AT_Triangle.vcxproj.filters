@@ -80,5 +80,6 @@
       <Filter>Header Files</Filter>
     </None>
     <None Include="triangle.vcxproj" />
+    <None Include="triangle.vcxproj.filters" />
   </ItemGroup>
 </Project>
