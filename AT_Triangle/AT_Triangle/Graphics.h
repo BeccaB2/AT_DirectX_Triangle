@@ -13,7 +13,6 @@ public:
 	{
 		using Exception::Exception;
 	};
-
 	class HrException : public GraphicsException
 	{
 	public:
@@ -29,7 +28,6 @@ public:
 		HRESULT hr;
 		std::string info;
 	};
-
 	class DeviceRemovedException : public HrException
 	{
 		using HrException::HrException;
@@ -52,7 +50,6 @@ private:
 	#ifndef NDEBUG
 		DxgiInfoManager infoManager;
 	#endif
-
 	ID3D11Device* pDevice = nullptr;
 	IDXGISwapChain* pSwap = nullptr;
 	ID3D11DeviceContext* pContext = nullptr;

@@ -3,7 +3,6 @@
 // Functionality for Windows 7 and above 
 #define _WIN32_WINNT 0x0601
 #include <sdkddkver.h>
-
 // Disabling unused/uneeded windows features
 #define WIN32_LEAN_AND_MEAN
 #define NOGDICAPMASKS

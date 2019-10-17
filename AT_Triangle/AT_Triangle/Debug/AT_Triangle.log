@@ -1,1 +1,10 @@
-﻿  AT_Triangle.vcxproj -> D:\AT_DirectX_Triangle\AT_Triangle\Debug\AT_Triangle.exe
+﻿  App.cpp
+  DxgiInfoManager.cpp
+  Graphics.cpp
+  WinMain.cpp
+  Window.cpp
+D:\AT_DirectX_Triangle\AT_Triangle\AT_Triangle\WinDisable.h(4,1): warning C4005:  '_WIN32_WINNT': macro redefinition (compiling source file WinMain.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdkddkver.h(217): message :  see previous definition of '_WIN32_WINNT' (compiling source file WinMain.cpp)
+D:\AT_DirectX_Triangle\AT_Triangle\AT_Triangle\WinDisable.h(43,1): warning C4005:  'STRICT': macro redefinition (compiling source file WinMain.cpp)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(23): message :  see previous definition of 'STRICT' (compiling source file WinMain.cpp)
+  AT_Triangle.vcxproj -> D:\AT_DirectX_Triangle\AT_Triangle\Debug\AT_Triangle.exe
