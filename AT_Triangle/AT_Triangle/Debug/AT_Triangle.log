@@ -1,7 +1,2 @@
-﻿  App.cpp
-  DxgiInfoManager.cpp
-  Graphics.cpp
-  WinMain.cpp
-  Window.cpp
-  dxerr.cpp
+﻿  Graphics.cpp
   AT_Triangle.vcxproj -> D:\AT_DirectX_Triangle\AT_Triangle\Debug\AT_Triangle.exe

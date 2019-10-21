@@ -39,7 +39,7 @@ Graphics::Graphics(HWND hWnd)
 	UINT swapCreateFlags = 0u;
 
 	#ifndef NDEBUG
-	swapCreateFlags |= D3D11_CREATE_DEVICE_DEBUG;
+	//swapCreateFlags |= D3D11_CREATE_DEVICE_DEBUG;
 	#endif
 
 	HRESULT hr;
