@@ -138,16 +138,61 @@ void Graphics::DrawTestTriangle()
 	const UINT stride = sizeof(Vertex);
 	const UINT offset = 0u;
 
-	pContext->IASetVertexBuffers(0u, 1u, &pVertexBuffer, &stride, &offset); // Handles where it starts setting, the no. of buffers it handles, what buffer it is using
+	// Handles where it starts setting, the no. of buffers it handles, what buffer it is using
+	pContext->IASetVertexBuffers(0u, 1u, pVertexBuffer.GetAddressOf(), &stride, &offset);
+
+	// Creating pixel shader
+	wrl::ComPtr<ID3D11PixelShader> pPixelShader;
+	wrl::ComPtr<ID3DBlob> pBlob;
+	GFX_THROW_INFO(D3DReadFileToBlob(L"PixelShader.cso", &pBlob));
+	GFX_THROW_INFO(pDevice->CreatePixelShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pPixelShader));
+
+	// Binding pixel shader
+	pContext->PSSetShader(pPixelShader.Get(), nullptr, 0u);
 
 	// Creating the vertex shader
 	wrl::ComPtr<ID3D11VertexShader> pVertexShader;
-	wrl::ComPtr<ID3DBlob> pBlob;
 	GFX_THROW_INFO(D3DReadFileToBlob(L"VertexShader.cso", &pBlob)); // Loading the shader
 	GFX_THROW_INFO(pDevice->CreateVertexShader(pBlob->GetBufferPointer(), pBlob->GetBufferSize(), nullptr, &pVertexShader));
 
 	// Binding the vertex shader
 	pContext->VSSetShader(pVertexShader.Get(), nullptr, 0);
+
+	// Vertex layout for 2d
+	wrl::ComPtr<ID3D11InputLayout> pInputLayout;
+
+	// Descriptor of positioning
+	const D3D11_INPUT_ELEMENT_DESC ied[] =
+	{
+		{ "Position",0,DXGI_FORMAT_R32G32_FLOAT,0,0,D3D11_INPUT_PER_VERTEX_DATA,0 },
+	};
+
+	// Create input layout object
+	GFX_THROW_INFO(pDevice->CreateInputLayout(
+		ied, (UINT)std::size(ied),
+		pBlob->GetBufferPointer(),
+		pBlob->GetBufferSize(),
+		&pInputLayout
+	));
+
+	// Binding the vertex layout
+	pContext->IASetInputLayout(pInputLayout.Get());
+
+	// Binding the render target
+	pContext->OMSetRenderTargets(1u, pTarget.GetAddressOf(), nullptr); // Gets the address of pTarget without clearing it - to access what is held within
+
+	// Set primitive topology to a triangle list
+	pContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+	// Configuration of the viewport - can be a portion of the render target - allows you to render within multiple sections
+	D3D11_VIEWPORT vp;
+	vp.Width = 800;
+	vp.Height = 600;
+	vp.MinDepth = 0;
+	vp.MaxDepth = 1;
+	vp.TopLeftX = 0;
+	vp.TopLeftY = 0;
+	pContext->RSSetViewports(1u, &vp);
 	
 	// Drawing an object with 3 vertices, drawing begins on the first vertex 
 	GFX_THROW_INFO_ONLY(pContext->Draw((UINT)std::size(vertices), 0u));

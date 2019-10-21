@@ -1,20 +1,18 @@
-\\nstu-nas01.uwe.ac.uk\users4$\rm2-bradburn\personal\third year\at\at_directx_triangle\at_triangle\at_triangle\debug\vc142.pdb
-\\nstu-nas01.uwe.ac.uk\users4$\rm2-bradburn\personal\third year\at\at_directx_triangle\at_triangle\at_triangle\debug\vc142.idb
-\\nstu-nas01.uwe.ac.uk\users4$\rm2-bradburn\personal\third year\at\at_directx_triangle\at_triangle\at_triangle\debug\winmain.obj
-d:\at_directx_triangle\at_triangle\at_triangle\debug\exception.obj
-d:\at_directx_triangle\at_triangle\at_triangle\debug\winmain.obj
-d:\at_directx_triangle\at_triangle\at_triangle\debug\window.obj
-d:\at_directx_triangle\at_triangle\at_triangle\debug\app.obj
-d:\at_directx_triangle\at_triangle\at_triangle\debug\timer.obj
 d:\at_directx_triangle\at_triangle\at_triangle\debug\graphics.obj
+d:\at_directx_triangle\at_triangle\at_triangle\debug\app.obj
 d:\at_directx_triangle\at_triangle\at_triangle\debug\dxgiinfomanager.obj
 d:\at_directx_triangle\at_triangle\at_triangle\debug\dxerr.obj
+d:\at_directx_triangle\at_triangle\at_triangle\debug\window.obj
+d:\at_directx_triangle\at_triangle\at_triangle\debug\exception.obj
+d:\at_directx_triangle\at_triangle\at_triangle\debug\timer.obj
+d:\at_directx_triangle\at_triangle\at_triangle\debug\winmain.obj
 d:\at_directx_triangle\at_triangle\at_triangle\debug\vc142.pdb
-d:\at_directx_triangle\at_triangle\at_triangle\debug\vc142.idb
 d:\at_directx_triangle\at_triangle\at_triangle\vertexshader.cso
+d:\at_directx_triangle\at_triangle\at_triangle\pixelshader.cso
 d:\at_directx_triangle\at_triangle\debug\at_triangle.exe
 d:\at_directx_triangle\at_triangle\debug\at_triangle.ilk
 d:\at_directx_triangle\at_triangle\debug\at_triangle.pdb
+d:\at_directx_triangle\at_triangle\at_triangle\debug\vc142.idb
 d:\at_directx_triangle\at_triangle\at_triangle\debug\at_triangle.tlog\cl.command.1.tlog
 d:\at_directx_triangle\at_triangle\at_triangle\debug\at_triangle.tlog\cl.read.1.tlog
 d:\at_directx_triangle\at_triangle\at_triangle\debug\at_triangle.tlog\cl.write.1.tlog
