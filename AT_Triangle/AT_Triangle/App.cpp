@@ -23,7 +23,10 @@ int App::Go()
 void App::DoFrame()	
 {
 	const float c = sin(timer.Peek()) / 2.0f + 0.5f; // Range from 0 - 1
+
 	wnd.Gfx().ClearBuffer(0.2f, 0.8f, c); // Range colour
+
+	wnd.Gfx().DrawTestTriangle();
 
 	wnd.Gfx().EndFrame();
 

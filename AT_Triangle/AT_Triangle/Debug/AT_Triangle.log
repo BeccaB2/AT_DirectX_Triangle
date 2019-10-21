@@ -1,2 +1,10 @@
-﻿  Graphics.cpp
+﻿  compilation object save succeeded; see D:\AT_DirectX_Triangle\AT_Triangle\AT_Triangle\VertexShader.cso
+  App.cpp
+  dxerr.cpp
+  DxgiInfoManager.cpp
+  Exception.cpp
+  Graphics.cpp
+  Timer.cpp
+  Window.cpp
+  WinMain.cpp
   AT_Triangle.vcxproj -> D:\AT_DirectX_Triangle\AT_Triangle\Debug\AT_Triangle.exe
